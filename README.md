@@ -28,3 +28,8 @@ Execution
 ./golden_ticket.sh
 Follow the prompts
 ```
+
+Cleanip
+```sh
+sudo rm -r domain_sid.txt && rm -r krbtgt_nt_hash.txt && rm -r Administrator.ccache
+```
