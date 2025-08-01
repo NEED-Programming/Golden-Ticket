@@ -11,7 +11,7 @@ Creating them Golden Tickets
 - Uses Netexec to dump NTDS for user 'krbtgt'
 - Creation of a Golden ticket for the user 'Administrator'
 - Exports Administrator ticket
-- Allows execution of Impacket PsExec or WMIExec for PrivEsc or Access
+- Allows execution of Kali Default Impacket PsExec or WMIExec for PrivEsc or Access
 
 ## Installation & Execution
 
