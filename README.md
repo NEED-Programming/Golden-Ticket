@@ -27,6 +27,7 @@ Execution
 ```sh
 ./golden_ticket.sh
 Follow the prompts
+ -- Drops Administrator.ccache in CURRENT foler --
 ```
 
 Cleanup
