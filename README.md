@@ -23,6 +23,7 @@ sudo git clone https://github.com/NEED-Programming/NeedServices.git
 sudo chmod +x golden_ticket.sh
 ```
 
+Execution
 ```sh
 ./golden_ticket.sh
 Follow the prompts
