@@ -29,10 +29,12 @@ Execution
 Follow the prompts
 ```
 
-Cleanip
+Cleanup
 ```sh
 sudo rm -r domain_sid.txt && rm -r krbtgt_nt_hash.txt && rm -r Administrator.ccache
 ```
+
+
 <img width="471" height="295" alt="golden_ticket" src="https://github.com/user-attachments/assets/83ac772e-e7dc-45b5-a408-5f934fe1de79" />
 
 
