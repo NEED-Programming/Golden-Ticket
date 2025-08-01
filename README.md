@@ -19,7 +19,7 @@ Install from Github
 
 ```sh
 cd %DIRECTORY_of_your_choosing%
-sudo git clone https://github.com/NEED-Programming/NeedServices.git
+sudo git clone https://github.com/NEED-Programming/Golden-Ticket.git
 sudo chmod +x golden_ticket.sh
 ```
 
