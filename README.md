@@ -3,7 +3,6 @@ Creating them Golden Tickets
 - Already Have Domain Admin?
 - Want to create a Golden ticket but don't remember all the commands?
 - Easy access?
-- Post Exploit ✨Magic ✨
 
 ## Features
 
@@ -11,7 +10,7 @@ Creating them Golden Tickets
 - Uses Netexec to dump NTDS for user 'krbtgt'
 - Creation of a Golden ticket for the user 'Administrator'
 - Exports Administrator ticket
-- Allows execution of Kali Default Impacket PsExec or WMIExec for PrivEsc or Access
+- Allows execution of Kali Default Impacket PsExec, WMIExec, SMBExec, and ATExec for Post Exploit ✨Magic ✨
 
 ## Installation & Execution
 
