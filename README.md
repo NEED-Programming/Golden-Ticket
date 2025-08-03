@@ -4,6 +4,9 @@ Creating them Golden Tickets
 - Want to create a Golden ticket but don't remember all the commands?
 - Easy access?
 
+<img width="471" height="295" alt="golden_ticket" src="https://github.com/user-attachments/assets/83ac772e-e7dc-45b5-a408-5f934fe1de79" />
+
+
 ## Features
 
 - Uses Netexec to Gather Domain SID
@@ -33,9 +36,6 @@ Cleanup
 ```sh
 sudo rm -r domain_sid.txt && rm -r krbtgt_nt_hash.txt && rm -r Administrator.ccache
 ```
-
-
-<img width="471" height="295" alt="golden_ticket" src="https://github.com/user-attachments/assets/83ac772e-e7dc-45b5-a408-5f934fe1de79" />
 
 Video
 https://vimeo.com/1106493100
