@@ -1,21 +1,11 @@
-# Golden-Ticket
-Creating them Golden Tickets
-- Already Have Domain Admin?
-- Want to create a Golden ticket but don't remember all the commands?
-- Easy access?
+# Golden Ticket Tool
+
+A Python wrapper that automates the Golden Ticket attack chain using NetExec and Impacket.
 
 <img width="471" height="295" alt="golden_ticket" src="https://github.com/user-attachments/assets/83ac772e-e7dc-45b5-a408-5f934fe1de79" />
 
 <img width="804" height="180" alt="image" src="https://github.com/user-attachments/assets/b186ccc6-73c7-476b-9da6-362619efad60" />
 
-
-## Features
-
-- Uses Netexec to Gather Domain SID
-- Uses Netexec to dump NTDS for user 'krbtgt'
-- Creation of a Golden ticket for the user 'Administrator'
-- Exports Administrator ticket
-- Allows execution of Kali Default Impacket PsExec, WMIExec, SMBExec, and ATExec for Post Exploit ✨Magic ✨
 
 ## Installation & Execution
 
@@ -29,16 +19,13 @@ or
 sudo chmod +x golden_tickets.py
 ```
 
-# Golden Ticket Tool
-
-A Python wrapper that automates the Golden Ticket attack chain using NetExec and Impacket.
-
 ## What It Does
 
 1. Retrieves the Domain SID via LDAP (falls back to SMB if LDAP fails)
 2. Dumps the krbtgt NT hash from NTDS via SMB
-3. Forges a Golden Ticket using `impacket-ticketer`
-4. Generates a ready-to-run shell script for your chosen Impacket tool
+3. Forges a Golden Ticket using `impacket-ticketer` for user 'Administrator'
+4. Allows execution of Kali Default Impacket PsExec, WMIExec, SMBExec, and ATExec for Post Exploit ✨Magic ✨
+5. Generates a ready-to-run shell script for your chosen Impacket tool
 
 ## Requirements
 
@@ -54,7 +41,7 @@ The following tools must be in your PATH:
 ## Usage
 
 ```bash
-python3 golden_ticket.py --ip <DC_IP> --user <USER> --domain <DOMAIN> [-p PASSWORD | -H HASH]
+python3 golden_tickets.py --ip <DC_IP> --user <USER> --domain <DOMAIN> [-p PASSWORD | -H HASH]
 ```
 
 ### Arguments
