@@ -29,11 +29,33 @@ sudo chmod +x golden_tickets.py
 
 ## Requirements
 
+### Python dependency
 ```bash
 pip install colorama --break-system-packages
 ```
 
-The following tools must be in your PATH:
+### NetExec
+```bash
+# Kali Linux (recommended)
+sudo apt install netexec -y
+
+# Or via pipx
+pipx install netexec
+
+# Verify install
+nxc --version
+```
+
+### Impacket
+```bash
+# Kali Linux
+sudo apt install impacket-scripts -y
+
+# Or via pip
+pip install impacket --break-system-packages
+```
+
+The following tools must be available in your PATH:
 - `nxc` (NetExec)
 - `impacket-ticketer`
 - `impacket-psexec` / `impacket-wmiexec` / `impacket-smbexec` / `impacket-atexec`
