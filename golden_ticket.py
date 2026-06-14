@@ -1,3 +1,5 @@
+## DEPRECATED -> USE golden_tickets.py -> this is just for a baseline of what "right" looks like
+
 import subprocess
 import argparse
 from colorama import init, Fore, Style
